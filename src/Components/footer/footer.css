@@ -1,0 +1,58 @@
+body {
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.footerContainer {
+  position: relative;
+  height: 12vh;
+  background-color: rgba(19, 17, 32, 0.597);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.footerSocial,
+.footerInfo,
+.footerCustomerCare,
+.footerContact {
+  margin-left: 50px;
+}
+
+.footerLogo {
+  font-size: 18px;
+}
+
+.footerSocialNetworks {
+  display: flex;
+  gap: 10px;
+}
+
+.footerCCItems,
+.footerInfoItems {
+  margin: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.footerCCItems::after,
+.footerInfoItems::after {
+  content: "";
+  display: block;
+  background-color: white;
+  height: 0.1em;
+  width: 0%;
+}
+.footerCCItems:hover::after,
+.footerInfoItems:hover::after {
+  width: 100%;
+  transition: all ease-in-out 250ms;
+}
+
+.footerContact {
+  margin-right: 50px;
+}

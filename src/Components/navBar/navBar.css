@@ -1,0 +1,58 @@
+.navContainer {
+  margin: 15px 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  height: 3em;
+}
+
+.navUl {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+  width: 500px;
+}
+
+.navUl li {
+  cursor: pointer;
+}
+
+.navUl li::after {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 0.1em;
+  width: 0%;
+  bottom: -0.3em;
+}
+
+.navUl li:hover::after {
+  width: 100%;
+  transition: all ease-in-out 250ms;
+}
+
+.logo {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shopping {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+.shopping li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}

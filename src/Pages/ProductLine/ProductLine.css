@@ -1,0 +1,15 @@
+.discounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  margin-top: 0;
+  width: 97.5%;
+  border: 5px solid red;
+  height: 14vh;
+  font-size: 50px;
+}
+
+.discountText {
+  margin: 0;
+}

@@ -1,0 +1,41 @@
+.heroContainer {
+  position: relative;
+  width: 98.9%;
+  margin: 1em;
+  height: 60vh;
+  box-shadow: 0 5px 15px -4px #1d151562;
+}
+
+.heroImage {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 60vh;
+  z-index: 0;
+}
+
+.heroButton {
+  background-color: rgba(49, 49, 49, 0.1);
+  color: white;
+  border: 3px solid white;
+  height: 80px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.heroHeadline {
+  position: relative;
+  font-size: 50px;
+  width: max-content;
+  color: aliceblue;
+  top: 15vh;
+  left: 50%;
+  margin: 0;
+  margin-bottom: 0.3em;
+  transform: translate(-50%);
+}
