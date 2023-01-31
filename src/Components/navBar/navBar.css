@@ -1,10 +1,14 @@
+.navc {
+  height: 3rem;
+  margin: 15px 3rem;
+}
 .navContainer {
   margin: 15px 3rem;
   display: flex;
   align-items: center;
   position: relative;
   justify-content: space-between;
-  height: 3em;
+  height: 3rem;
 }
 
 .navUl {
@@ -13,9 +17,10 @@
   text-decoration: none;
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  gap: 2em;
-  width: 500px;
+  justify-content: flex-start;
+  width: 380px;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .navUl li {
@@ -41,11 +46,15 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  font-size: 2rem;
+  top: 0;
+  transform: translateY(-13%);
 }
 
 .shopping {
   display: flex;
-  gap: 2em;
+  gap: 2rem;
   list-style: none;
 }
 .shopping li {
@@ -55,4 +64,100 @@
 a {
   text-decoration: inherit;
   color: inherit;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-device-width: 480px) {
+  .navUl {
+    display: none;
+  }
+  .shopping {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 960px) {
+  .navUl {
+    display: none;
+  }
+  .shopping {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 11;
+    transition: all ease-in-out 500ms;
+  }
+  .navContainerBar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+    z-index: 10;
+    position: absolute;
+    height: 80vh;
+    top: 0;
+    right: 0;
+    width: 50%;
+    transition: all ease-in-out 500ms;
+  }
+  .navUlBar {
+    padding: 0;
+    margin: 1.5rem;
+    margin-top: 6rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 380px;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .navUlBar li {
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .navUlBar li::after {
+    content: "";
+    display: block;
+    background-color: black;
+    height: 0.1em;
+    width: 0%;
+    bottom: -0.3em;
+  }
+
+  .navUlBar li:hover::after {
+    width: 100%;
+    transition: all ease-in-out 250ms;
+  }
+
+  .shoppingBar {
+    padding: 0;
+    margin: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 380px;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+  }
+
+  .shoppingBar li {
+    cursor: pointer;
+  }
 }

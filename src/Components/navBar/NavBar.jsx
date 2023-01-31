@@ -8,43 +8,61 @@ import {
   icon,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+
 const NavBar = () => {
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    return setNav(!nav);
+  };
+
   return (
-    <div className="navContainer">
-      <div className="navList">
-        <ul className="navUl">
-          <li>
-            <Link to={"/"}>HOME</Link>
-          </li>
-          <li>
-            <Link to={"/ProductLine"}>PRODUCT LINE</Link>
-          </li>
-          <li>
-            <Link to={"/AboutUs"}>ABOUT US</Link>
-          </li>
-          <li>
-            <Link to={"/Contact"}>CONTACT</Link>
-          </li>
-        </ul>
-      </div>
+    <div className="navc">
       <h1 className="logo">
-        <Link to={"/"}>Logo</Link>
+        <Link to={"/"}>
+          <img src="../favicon.ico" alt="logo" width="50" height="50" />
+        </Link>
       </h1>
-      <div className="navList">
-        <ul className="shopping">
-          <li>
-            <FontAwesomeIcon icon={solid("dollar-sign")} size="1x" />
-          </li>
-          <li>
-            <FontAwesomeIcon icon={solid("Search")} size="1x" />
-          </li>
-          <li>
-            <FontAwesomeIcon icon={regular("user")} size="1x" />
-          </li>
-          <li>
-            <FontAwesomeIcon icon={solid("shopping-cart")} size="1x" />
-          </li>
-        </ul>
+      <div className={nav ? "navContainerBar" : "navContainer"}>
+        <div className="navListLeft">
+          <ul className={nav ? "navUlBar" : "navUl"}>
+            <li>
+              <Link to={"/"}>HOME</Link>
+            </li>
+            <li>
+              <Link to={"/ProductLine"}>PRODUCT LINE</Link>
+            </li>
+            <li>
+              <Link to={"/AboutUs"}>ABOUT US</Link>
+            </li>
+            <li>
+              <Link to={"/Contact"}>CONTACT</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="navListRight">
+          <ul className={nav ? "shoppingBar" : "shopping"}>
+            <li>
+              <FontAwesomeIcon icon={solid("dollar-sign")} size="1x" />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={solid("Search")} size="1x" />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={regular("user")} size="1x" />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={solid("shopping-cart")} size="1x" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="hamburger" onClick={handleNav}>
+        {nav ? (
+          <FontAwesomeIcon icon={solid("X")} size="xl" />
+        ) : (
+          <FontAwesomeIcon icon={solid("bars")} size="xl" />
+        )}
       </div>
     </div>
   );

@@ -11,31 +11,31 @@ body {
   display: flex;
   justify-content: space-between;
   color: aliceblue;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-top: 0.5em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .footerSocial,
 .footerInfo,
 .footerCustomerCare,
 .footerContact {
-  margin-left: 50px;
+  margin-left: 2rem;
 }
 
 .footerLogo {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .footerSocialNetworks {
   display: flex;
-  gap: 10px;
+  gap: 0.62rem;
 }
 
 .footerCCItems,
 .footerInfoItems {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0.2rem;
   cursor: pointer;
   width: max-content;
 }
@@ -55,5 +55,5 @@ body {
 }
 
 .footerContact {
-  margin-right: 50px;
+  margin-right: 2rem;
 }
