@@ -1,0 +1,48 @@
+.shopItemContainer {
+  width: 14%;
+  height: 60vh;
+  margin-bottom: 2em;
+}
+
+.shopItemImage {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 25vh;
+}
+
+.shopItemDiv {
+  color: aliceblue;
+  font-size: 15px;
+  box-shadow: 0 8px 8px -4px #1d151562;
+  background-color: rgba(19, 17, 32, 0.597);
+  padding-top: 0.2em;
+  padding-bottom: 0.1em;
+  padding-left: 1em;
+  cursor: pointer;
+  position: relative;
+  bottom: 6.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopItemTitle {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 15px;
+}
+
+.shopItemSubTitle,
+.shopItemPrice {
+  margin: 4px;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.faIcon {
+  margin-right: 15px;
+}

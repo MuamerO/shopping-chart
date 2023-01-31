@@ -6,6 +6,10 @@ import Contact from "./Pages/Contact/Contact";
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
 import { Route, Routes } from "react-router-dom";
 import RouteLayout from "Components/RouteLayout.jsx";
+import Winter from "Pages/ProductLine/Winter/Winter.jsx";
+import Fall from "Pages/ProductLine/Fall/Fall.jsx";
+import Summer from "Pages/ProductLine/Summer/Summer.jsx";
+import Spring from "Pages/ProductLine/Spring/Spring.jsx";
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
         <Route path="/" element={<RouteLayout />}>
           <Route index element={<Home />} />
           <Route exact path="/ProductLine" element={<ProductLine />} />
+          <Route path="/ProductLine/Winter" element={<Winter />} />
+          <Route path="/ProductLine/Summer" element={<Summer />} />
+          <Route path="/ProductLine/Spring" element={<Spring />} />
+          <Route path="/ProductLine/Fall" element={<Fall />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/ShoppingCart" element={<ShoppingCart />} />

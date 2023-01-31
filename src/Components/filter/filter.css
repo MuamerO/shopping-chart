@@ -1,0 +1,14 @@
+.filterContainer {
+  width: 20%;
+  min-height: 60vh;
+  margin-left: 2em;
+}
+
+.filterCollectionChange {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  font-weight: 700;
+  border-width: 30px;
+  border-bottom: 3px solid black;
+}

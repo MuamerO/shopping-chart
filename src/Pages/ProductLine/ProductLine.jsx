@@ -1,6 +1,6 @@
 import { ImageCard } from "Components";
 import React from "react";
-import imageCardData from "../../imageCardData";
+import imageCardData from "../../imageCardDataProducs";
 import "./ProductLine.css";
 const ProductLine = () => {
   const imageCards = imageCardData.map((item) => {
@@ -9,9 +9,6 @@ const ProductLine = () => {
   return (
     <>
       <div className="appFlex">{imageCards}</div>
-      <div className="discounts">
-        <h1 className="discountText">Discounts</h1>
-      </div>
     </>
   );
 };

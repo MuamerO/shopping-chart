@@ -1,0 +1,7 @@
+.productLineItemCards {
+  color: blue;
+  width: 75%;
+}
+.productLineItemCards {
+  display: flex;
+}
