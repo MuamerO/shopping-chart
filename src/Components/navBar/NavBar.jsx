@@ -28,7 +28,7 @@ const NavBar = () => {
         </ul>
       </div>
       <h1 className="logo">
-        <Link to={"/"}>E-Commerce site</Link>
+        <Link to={"/"}>Logo</Link>
       </h1>
       <div className="navList">
         <ul className="shopping">
