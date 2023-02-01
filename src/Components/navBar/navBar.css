@@ -1,9 +1,10 @@
 .navc {
   height: 3rem;
-  margin: 15px 3rem;
+  margin: 15px 1.8rem;
 }
-.navContainer {
-  margin: 15px 3rem;
+.navContainer,
+.navContainerBar {
+  margin: 15px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -11,7 +12,8 @@
   height: 3rem;
 }
 
-.navUl {
+.navUl,
+.navUlBar {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -23,11 +25,13 @@
   flex-wrap: wrap;
 }
 
-.navUl li {
+.navUl li,
+.navUlBar li {
   cursor: pointer;
 }
 
-.navUl li::after {
+.navUl li::after,
+.navUlBar li::after {
   content: "";
   display: block;
   background-color: black;
@@ -36,7 +40,8 @@
   bottom: -0.3em;
 }
 
-.navUl li:hover::after {
+.navUl li:hover::after,
+.navUlBar li:hover::after {
   width: 100%;
   transition: all ease-in-out 250ms;
 }
@@ -52,12 +57,14 @@
   transform: translateY(-13%);
 }
 
-.shopping {
+.shopping,
+.shoppingBar {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-.shopping li {
+.shopping li,
+.shoppingBar li {
   cursor: pointer;
 }
 
@@ -72,22 +79,7 @@ a {
 }
 
 @media (max-width: 480px) {
-  .navUl {
-    display: none;
-  }
-  .shopping {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 960px) {
-  .navUl {
-    display: none;
-  }
+  .navUl,
   .shopping {
     display: none;
   }
@@ -100,18 +92,25 @@ a {
     transition: all ease-in-out 500ms;
   }
   .navContainerBar {
+    margin: 0;
     display: flex;
+    align-items: right;
+    justify-content: right;
     flex-direction: column;
     background-color: rgb(247, 247, 247);
     z-index: 10;
     position: absolute;
-    height: 80vh;
+    height: 100vh;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     transition: all ease-in-out 500ms;
   }
   .navUlBar {
+    width: max-content;
+    top: 0;
+    right: 0;
+    position: absolute;
     padding: 0;
     margin: 1.5rem;
     margin-top: 6rem;
@@ -119,8 +118,8 @@ a {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    width: 380px;
+    align-items: center;
+    align-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
   }
@@ -145,15 +144,102 @@ a {
   }
 
   .shoppingBar {
+    top: 0;
+    right: 0;
+    position: absolute;
     padding: 0;
     margin: 1.5rem;
+    margin-top: 14.5rem;
     text-decoration: none;
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    width: 380px;
-    gap: 2rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .shoppingBar li {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 960px) {
+  .navUl {
+    display: none;
+  }
+  .shopping {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 11;
+    transition: all ease-in-out 500ms;
+  }
+  .navContainerBar {
+    margin: 0;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+    z-index: 10;
+    position: absolute;
+    height: 80vh;
+    top: 0;
+    right: 0;
+    width: 50%;
+    transition: all ease-in-out 500ms;
+  }
+  .navUlBar {
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 0;
+    margin: 1.5rem;
+    margin-top: 6rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
     flex-wrap: wrap;
+  }
+
+  .navUlBar li {
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .navUlBar li::after {
+    content: "";
+    display: block;
+    background-color: black;
+    height: 0.1em;
+    width: 0%;
+    bottom: -0.3em;
+  }
+
+  .navUlBar li:hover::after {
+    width: 100%;
+    transition: all ease-in-out 250ms;
+  }
+
+  .shoppingBar {
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 0;
+    margin: 1.5rem;
+    margin-top: 14.5rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
     font-size: 1.5rem;
   }
 

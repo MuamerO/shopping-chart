@@ -1,11 +1,11 @@
 body {
   height: 100%;
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .footerContainer {
   position: relative;
-  height: 11.5vh;
+  height: max-content;
   background-color: rgba(19, 17, 32, 0.597);
   width: 100%;
   display: flex;
@@ -14,6 +14,8 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 0.5rem;
+  bottom: 0;
+  left: 0;
 }
 
 .footerSocial,

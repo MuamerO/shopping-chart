@@ -24,23 +24,31 @@ const NavBar = () => {
         </Link>
       </h1>
       <div className={nav ? "navContainerBar" : "navContainer"}>
-        <div className="navListLeft">
+        <div className="navList">
           <ul className={nav ? "navUlBar" : "navUl"}>
             <li>
-              <Link to={"/"}>HOME</Link>
+              <Link to={"/"} onClick={handleNav}>
+                HOME
+              </Link>
             </li>
             <li>
-              <Link to={"/ProductLine"}>PRODUCT LINE</Link>
+              <Link to={"/ProductLine"} onClick={handleNav}>
+                PRODUCT LINE
+              </Link>
             </li>
             <li>
-              <Link to={"/AboutUs"}>ABOUT US</Link>
+              <Link to={"/AboutUs"} onClick={handleNav}>
+                ABOUT US
+              </Link>
             </li>
             <li>
-              <Link to={"/Contact"}>CONTACT</Link>
+              <Link to={"/Contact"} onClick={handleNav}>
+                CONTACT
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="navListRight">
+        <div className="navList">
           <ul className={nav ? "shoppingBar" : "shopping"}>
             <li>
               <FontAwesomeIcon icon={solid("dollar-sign")} size="1x" />

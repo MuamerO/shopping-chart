@@ -1,6 +1,5 @@
 .heroContainer {
   position: relative;
-  width: 98.9%;
   margin: 1em;
   height: 60vh;
   box-shadow: 0 5px 15px -4px #1d151562;
@@ -20,7 +19,7 @@
   border: 3px solid white;
   height: 5rem;
   width: 12rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   position: relative;
   top: 15vh;
@@ -30,7 +29,7 @@
 
 .heroHeadline {
   position: relative;
-  font-size: 50px;
+  font-size: 4rem;
   width: max-content;
   color: aliceblue;
   top: 15vh;
@@ -38,4 +37,39 @@
   margin: 0;
   margin-bottom: 0.3rem;
   transform: translate(-50%);
+}
+
+@media (max-width: 480px) {
+  .heroHeadline {
+    font-size: 1.5rem;
+  }
+  .heroContainer {
+    position: relative;
+    margin: 0;
+    margin-bottom: 1rem;
+    height: 60vh;
+  }
+
+  .heroButton {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 960px) {
+  .heroHeadline {
+    font-size: 2.3rem;
+  }
+  .heroContainer {
+    position: relative;
+    margin: 0;
+    margin-bottom: 1rem;
+    height: 60vh;
+  }
+  .heroButton {
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.2rem;
+  }
 }
