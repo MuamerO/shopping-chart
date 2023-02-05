@@ -1,10 +1,10 @@
 .navc {
   height: 3rem;
-  margin: 15px 1.8rem;
+  margin: 1rem 1.8rem;
 }
 .navContainer,
 .navContainerBar {
-  margin: 15px 0;
+  margin: 1.5rem 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -46,15 +46,18 @@
   transition: all ease-in-out 250ms;
 }
 
+.logolink {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  display: block;
+}
+
 .logo {
   cursor: pointer;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-
   font-size: 2rem;
-  top: 0;
-  transform: translateY(-13%);
 }
 
 .shopping,

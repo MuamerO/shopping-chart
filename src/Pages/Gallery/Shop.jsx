@@ -7,6 +7,7 @@ const Shop = () => {
       <div className="filters">Filters</div>
       <div>
         <ImageCard />
+        <ImageCard />
       </div>
     </div>
   );

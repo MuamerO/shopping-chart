@@ -1,48 +1,100 @@
 .shopItemContainer {
-  width: 14%;
-  height: 60vh;
-  margin-bottom: 2em;
+  max-width: 22vw;
+  position: relative;
+}
+
+.imgShopItem {
+  position: relative;
+}
+
+.imgContainter {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .shopItemImage {
-  position: relative;
-  object-fit: cover;
   width: 100%;
-  height: 25vh;
 }
 
 .shopItemDiv {
   color: aliceblue;
-  font-size: 15px;
+  position: absolute;
   box-shadow: 0 8px 8px -4px #1d151562;
   background-color: rgba(19, 17, 32, 0.597);
-  padding-top: 0.2em;
-  padding-bottom: 0.1em;
-  padding-left: 1em;
-  cursor: pointer;
-  position: relative;
-  bottom: 6.5em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+}
+
+.shopItemHeader {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
 .shopItemTitle {
-  margin: 0;
-  margin-top: 0.5em;
-  font-size: 18px;
-  font-weight: 800;
-  margin-left: 15px;
-}
-
-.shopItemSubTitle,
-.shopItemPrice {
-  margin: 4px;
+  margin: 0 1rem;
+  margin-top: 1rem;
   font-weight: 500;
-  margin-left: 30px;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
-.faIcon {
-  margin-right: 15px;
+.shopItemSubTitle {
+  margin: 0 1rem;
+}
+
+.shopItemPriceDiv {
+  margin: 0 1rem;
+  display: flex;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.shopItemPriceDiv p {
+  margin: 0.5rem 0;
+}
+
+.itemSizes {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.buyBox {
+  margin-top: 1rem;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addItem {
+  color: aliceblue;
+  box-shadow: 0 6px 8px -4px #1d151562;
+  border: 1px solid black;
+  background-color: rgba(19, 17, 32, 0.836);
+  border-radius: 5%;
+  height: 2.5rem;
+  width: 10rem;
+}
+.addItem:hover {
+  cursor: pointer;
+}
+
+.itemSizes p,
+h4 {
+  margin: 0.5rem 0;
+}
+
+.availableSizes {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: flex-end;
 }

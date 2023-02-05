@@ -13,17 +13,18 @@ import { useState } from "react";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
-    return setNav(!nav);
+    let width = window.innerWidth;
+    return width < 960 ? setNav(!nav) : false;
   };
 
   return (
     <div className="navc">
-      <h1 className="logo">
-        <Link to={"/"}>
-          <img src="../favicon.ico" alt="logo" width="50" height="50" />
-        </Link>
-      </h1>
       <div className={nav ? "navContainerBar" : "navContainer"}>
+        <div className="logo">
+          <Link className="logoLink" to={"/"}>
+            <img src="../favicon.ico" alt="logo" width="50" height="50" />
+          </Link>
+        </div>
         <div className="navList">
           <ul className={nav ? "navUlBar" : "navUl"}>
             <li>
