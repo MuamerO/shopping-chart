@@ -8,7 +8,7 @@ const Hero = ({ headline, photoLink }) => {
       <img className="heroImage" src={photoLink} alt="Hero" />
       <p className="heroHeadline">{headline}</p>
       <button className="heroButton">
-        <Link to={"/ProductLine"}> EXPLORE</Link>
+        <Link to={"/ProductLine/Summer"}> EXPLORE</Link>
       </button>
     </div>
   );

@@ -33,7 +33,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link to={"/ProductLine"} onClick={handleNav}>
+              <Link to={"/ProductLine/Summer"} onClick={handleNav}>
                 PRODUCT LINE
               </Link>
             </li>
