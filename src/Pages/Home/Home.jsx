@@ -1,6 +1,5 @@
 import { ItemCard, ImageCard, Hero } from "../../Components/index";
 import data from "../../herodata.js";
-import imageCardData from "../../imageCardData";
 import itemCardData from "../../itemCardData.js";
 import "../../App.css";
 import ReadItem from "Components/ReadItem/ReadItem";
