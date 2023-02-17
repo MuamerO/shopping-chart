@@ -7,3 +7,36 @@
 .productLineShopContainer {
   margin: 2rem;
 }
+
+@media (max-width: 1700px) {
+  .productLineItemCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .productLineItemCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .productLineShopContainer {
+    margin: 2rem;
+    flex-direction: column;
+
+    justify-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .productLineItemCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
