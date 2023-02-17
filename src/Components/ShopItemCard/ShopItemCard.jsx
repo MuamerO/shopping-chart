@@ -5,8 +5,6 @@ import React, { useState } from "react";
 import "./ShopItemCard.css";
 
 const ShopItemCard = ({ image, title, subtitle, price }) => {
-  const [amount, setAmount] = useState(0);
-
   return (
     <div className="shopItemContainer">
       <div className="imgShopItem">

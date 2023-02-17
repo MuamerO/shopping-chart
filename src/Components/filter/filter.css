@@ -12,3 +12,13 @@
   border-width: 30px;
   border-bottom: 3px solid black;
 }
+
+@media (max-width: 960px) {
+  .filterContainer {
+    width: 100%;
+    height: fit-content;
+    min-height: auto;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+}

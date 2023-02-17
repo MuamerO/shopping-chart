@@ -61,7 +61,9 @@ const NavBar = () => {
               <FontAwesomeIcon icon={regular("user")} size="1x" />
             </li>
             <li>
-              <FontAwesomeIcon icon={solid("shopping-cart")} size="1x" />
+              <Link to={"/ShoppingCart"}>
+                <FontAwesomeIcon icon={solid("shopping-cart")} size="1x" />
+              </Link>
             </li>
           </ul>
         </div>

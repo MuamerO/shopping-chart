@@ -79,11 +79,15 @@ body {
   .footerCustomerCare,
   .footerContact {
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
   .footerSocial {
     order: 5;
   }
-
   .footerLogo {
     font-size: 1.2rem;
   }
