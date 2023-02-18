@@ -28,7 +28,6 @@
   .productLineShopContainer {
     margin: 2rem;
     flex-direction: column;
-
     justify-items: center;
   }
 }

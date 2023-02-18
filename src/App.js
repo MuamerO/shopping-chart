@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<RouteLayout />}>
           <Route index element={<Home />} />
-          <Route exact path="/ProductLine" element={<ProductLine />} />
+          <Route exact path="/ProductLine/Summer" element={<Summer />} />
           <Route path="/ProductLine/Winter" element={<Winter />} />
           <Route path="/ProductLine/Summer" element={<Summer />} />
           <Route path="/ProductLine/Spring" element={<Spring />} />
