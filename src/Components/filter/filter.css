@@ -6,6 +6,7 @@
 
 .filterCollectionChange {
   display: flex;
+  width: 300px;
   align-items: baseline;
   gap: 1em;
   font-weight: 700;

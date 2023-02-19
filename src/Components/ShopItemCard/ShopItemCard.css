@@ -62,6 +62,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 1rem;
+  height: 2.6rem;
 }
 .buyBox {
   margin-top: 1rem;
