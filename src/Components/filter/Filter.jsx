@@ -31,9 +31,6 @@ const Filter = ({ season }) => {
   let Plink1 = `/ProductLine/${link1}`;
   let Plink2 = `/ProductLine/${link2}`;
   let Plink3 = `/ProductLine/${link3}`;
-  console.log(Plink1);
-  console.log(Plink2);
-  console.log(Plink3);
 
   return (
     <div className="filterContainer">
