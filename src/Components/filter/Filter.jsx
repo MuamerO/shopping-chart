@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "./filter.css";
 
 const Filter = ({ season }) => {
-  console.log(season);
-  let Headline = "";
   let link1 = "";
   let link2 = "";
   let link3 = "";
@@ -48,3 +46,72 @@ const Filter = ({ season }) => {
 };
 
 export default Filter;
+
+/*   Alternative Code
+
+  if (season == "Spring") {
+    return (
+      <div className="filterContainer">
+        <div className="filterCollectionChange">
+          <h1 className="categoryFilterName">{season}</h1>
+          <Link to="/ProductLine/Summer">Summer</Link>
+          <Link to="/ProductLine/Fall">Fall</Link>
+          <Link to="/ProductLine/Winter">Winter</Link>
+        </div>
+        <div className="filterCategory">filter by category</div>
+        <div className="filterSize">filter by size</div>
+        <div className="filterSize">filter by price</div>
+      </div>
+    );
+  }
+  if (season == "Summer") {
+    return (
+      <div className="filterContainer">
+        <div className="filterCollectionChange">
+          <h1 className="categoryFilterName">{season}</h1>
+          <Link to="/ProductLine/Fall">Fall</Link>
+          <Link to="/ProductLine/Winter">Winter</Link>
+          <Link to="/ProductLine/Spring">Spring</Link>
+        </div>
+        <div className="filterCategory">filter by category</div>
+        <div className="filterSize">filter by size</div>
+        <div className="filterSize">filter by price</div>
+      </div>
+    );
+  }
+  if (season == "Fall") {
+    return (
+      <div className="filterContainer">
+        <div className="filterCollectionChange">
+          <h1 className="categoryFilterName">{season}</h1>
+          <Link to="/ProductLine/Winter">Winter</Link>
+          <Link to="/ProductLine/Spring">Spring</Link>
+          <Link to="/ProductLine/Summer">Summer</Link>
+        </div>
+        <div className="filterCategory">filter by category</div>
+        <div className="filterSize">filter by size</div>
+        <div className="filterSize">filter by price</div>
+      </div>
+    );
+  }
+  if (season == "Winter") {
+    return (
+      <div className="filterContainer">
+        <div className="filterCollectionChange">
+          <h1 className="categoryFilterName">{season}</h1>
+          <Link to="/ProductLine/Spring">Spring</Link>
+          <Link to="/ProductLine/Summer">Summer</Link>
+          <Link to="/ProductLine/Fall">Fall</Link>
+        </div>
+        <div className="filterCategory">filter by category</div>
+        <div className="filterSize">filter by size</div>
+        <div className="filterSize">filter by price</div>
+      </div>
+    );
+  }
+
+  
+
+
+
+ */

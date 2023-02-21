@@ -6,7 +6,7 @@ import ReadItem from "Components/ReadItem/ReadItem";
 import { useState } from "react";
 
 function Home() {
-  // Pulling from file on PC
+  // Pulling from file on local storage
   /* 
   const imageCards = imageCardData.map((item) => {
     return <ImageCard key={item.id} {...item} />;

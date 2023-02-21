@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import "./ShopItemCard.css";
 
-const ShopItemCard = ({ image, title, subtitle, price }) => {
+const ShopItemCard = ({
+  cardImage,
+  title,
+  subtitle,
+  price,
+  id,
+  collection,
+}) => {
   const [itemBought, setItemBought] = useState(false);
   const [addRemove, setAddRemove] = useState("Add to cart");
   const [sizeSelected, setSizeSelected] = useState("");
-
   const trueItem = () => {
     setAddRemove(`Add to cart`);
     setItemBought(false);
@@ -49,7 +55,7 @@ const ShopItemCard = ({ image, title, subtitle, price }) => {
     <div className="shopItemContainer">
       <div className="imgShopItem">
         <div className="imgContainter">
-          <img className="shopItemImage" src={image} alt="Item" />
+          <img className="shopItemImage" src={cardImage} alt="Item" />
         </div>
 
         <div className="shopItemDiv">

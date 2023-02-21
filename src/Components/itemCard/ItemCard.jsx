@@ -12,6 +12,7 @@ const ItemCard = ({ image, title, subtitle, price }) => {
     setShowDiv(!showDiv);
   };
  */
+
   return (
     <div className="itemContainer">
       <img className="itemImage" src={image} alt="Item" />
