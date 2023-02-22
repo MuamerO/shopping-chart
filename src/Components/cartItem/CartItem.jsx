@@ -1,12 +1,15 @@
-import React from "react";
+import "Components/cartItem/cartItem.css";
+import { useDispatch, useSelector } from "react-redux";
 
-const CartItem = (id, img, amount, size, title, price) => {
+const CartItem = ({ id, price, img, amount, size, title }) => {
   return (
-    <div>
-      <img src={img} alt={title} />
-      <p className="price">{price}</p>
-      <p className="size">{size}</p>
-      <p className="amount">{amount}</p>
+    <div className="container">
+      <img className="image" src={img} alt={title} />
+      <div className="attriutes">
+        <p className="price">{`price: ${price}`}</p>
+        <p className="size">{`size: ${size}`}</p>
+        <p className="amount">{`amount: ${amount}`}</p>
+      </div>
     </div>
   );
 };

@@ -38,14 +38,9 @@ const ShopItemCard = ({
     }
     if (
       uniqueItem.find((o) => {
-        if (o.id == id) return true;
-      }) &&
-      uniqueItem.find((o) => {
-        if (o.size == itemBought.size) return true;
+        if (o.id == id + itemBought.size) return true;
       })
     ) {
-      console.log(id);
-      console.log(itemBought.size);
       setShowHideDouble({ display: "flex", color: "red" });
       setTimeout(() => {
         setShowHideDouble({ display: "none" });
@@ -62,7 +57,7 @@ const ShopItemCard = ({
       case `XS`:
         setSizeSelected(`XS`);
         setItemBought({
-          id: id,
+          id: id + size,
           price: price,
           size: "XS",
           price: price,
@@ -74,7 +69,7 @@ const ShopItemCard = ({
       case `S`:
         setSizeSelected(`S`);
         setItemBought({
-          id: id,
+          id: id + size,
           price: price,
           size: "S",
           price: price,
@@ -86,7 +81,7 @@ const ShopItemCard = ({
       case `M`:
         setSizeSelected(`M`);
         setItemBought({
-          id: id,
+          id: id + size,
           price: price,
           size: "M",
           price: price,
@@ -98,7 +93,7 @@ const ShopItemCard = ({
       case `L`:
         setSizeSelected(`L`);
         setItemBought({
-          id: id,
+          id: id + size,
           price: price,
           size: "L",
           price: price,
@@ -111,7 +106,7 @@ const ShopItemCard = ({
       case `XL`:
         setSizeSelected(`XL`);
         setItemBought({
-          id: id,
+          id: id + size,
           price: price,
           size: "XL",
           price: price,
@@ -207,7 +202,11 @@ const ShopItemCard = ({
         className="buyBox"
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <button className="addItem" type="button" onClick={handleBoughtClick}>
+        <button
+          className="addItem"
+          type="button"
+          onClick={() => handleBoughtClick()}
+        >
           Add Item
         </button>
       </div>
