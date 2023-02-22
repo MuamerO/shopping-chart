@@ -13,9 +13,6 @@ import { useSelector } from "react-redux";
 
 const NavBar = () => {
   const uniqueItems = useSelector((state) => state.cart.cartItems.length);
-
-  console.log(uniqueItems);
-
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     let width = window.innerWidth;

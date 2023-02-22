@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ShopItemCard.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "features/cart/cartSlice";
 
 const ShopItemCard = ({
   cardImage,
@@ -9,44 +11,115 @@ const ShopItemCard = ({
   id,
   collection,
 }) => {
-  const [itemBought, setItemBought] = useState(false);
-  const [addRemove, setAddRemove] = useState("Add to cart");
-  const [sizeSelected, setSizeSelected] = useState("");
-  const trueItem = () => {
-    setAddRemove(`Add to cart`);
-    setItemBought(false);
-    setSizeSelected("");
-  };
-  const falseItem = () => {
-    setAddRemove(`Remove from cart`);
-    setItemBought(true);
-  };
+  const uniqueItem = useSelector((state) => state.cart.cartItems);
 
+  const [showHide, setShowHide] = useState({ display: "none" });
+  const [showHideDouble, setShowHideDouble] = useState({
+    display: "none",
+  });
+  const dispatch = useDispatch();
+  const [itemBought, setItemBought] = useState({
+    id: id,
+    price: price,
+    size: "",
+    price: price,
+    title: title,
+    img: cardImage,
+    amount: 1,
+  });
+  const [sizeSelected, setSizeSelected] = useState("");
   const handleBoughtClick = () => {
-    itemBought ? trueItem() : falseItem();
+    if (itemBought.size == "") {
+      setShowHide({ display: "flex", color: "red" });
+      setTimeout(() => {
+        setShowHide({ display: "none" });
+      }, 1000);
+      return;
+    }
+    if (
+      uniqueItem.find((o) => {
+        if (o.id == id) return true;
+      }) &&
+      uniqueItem.find((o) => {
+        if (o.size == itemBought.size) return true;
+      })
+    ) {
+      console.log(id);
+      console.log(itemBought.size);
+      setShowHideDouble({ display: "flex", color: "red" });
+      setTimeout(() => {
+        setShowHideDouble({ display: "none" });
+      }, 1000);
+      return;
+    }
+    setShowHide({ display: "none" });
+    setShowHideDouble({ display: "none" });
+    dispatch(addItem(itemBought));
   };
 
   const handleSize = (size) => {
     switch (size) {
       case `XS`:
-        trueItem();
         setSizeSelected(`XS`);
+        setItemBought({
+          id: id,
+          price: price,
+          size: "XS",
+          price: price,
+          title: title,
+          img: cardImage,
+          amount: 1,
+        });
         break;
       case `S`:
-        trueItem();
         setSizeSelected(`S`);
+        setItemBought({
+          id: id,
+          price: price,
+          size: "S",
+          price: price,
+          title: title,
+          img: cardImage,
+          amount: 1,
+        });
         break;
       case `M`:
-        trueItem();
         setSizeSelected(`M`);
+        setItemBought({
+          id: id,
+          price: price,
+          size: "M",
+          price: price,
+          title: title,
+          img: cardImage,
+          amount: 1,
+        });
         break;
       case `L`:
-        trueItem();
         setSizeSelected(`L`);
+        setItemBought({
+          id: id,
+          price: price,
+          size: "L",
+          price: price,
+          title: title,
+          img: cardImage,
+          amount: 1,
+        });
+
         break;
       case `XL`:
-        trueItem();
         setSizeSelected(`XL`);
+        setItemBought({
+          id: id,
+          price: price,
+          size: "XL",
+          price: price,
+          title: title,
+          img: cardImage,
+          amount: 1,
+        });
+
         break;
     }
   };
@@ -124,9 +197,18 @@ const ShopItemCard = ({
           </div>
         </div>
       </div>
-      <div className="buyBox">
+      <div className="warning" style={showHide}>
+        You must select size
+      </div>
+      <div className="warning" style={showHideDouble}>
+        You already added this size of item
+      </div>
+      <div
+        className="buyBox"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
         <button className="addItem" type="button" onClick={handleBoughtClick}>
-          {addRemove}
+          Add Item
         </button>
       </div>
     </div>
