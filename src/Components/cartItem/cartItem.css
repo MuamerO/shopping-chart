@@ -1,11 +1,56 @@
 .container {
-  width: 200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px black solid;
+}
+
+.attributes {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  gap: 0.5rem;
 }
 
 .image {
+  margin: 0.5rem;
   width: 100px;
   height: 100px;
+  border-radius: 5%;
+}
+
+.cartPrice,
+.cartSize,
+.cartTitle {
+  margin: 0;
+}
+
+.cartPrice {
+  margin-top: 2rem;
+  color: red;
+  font-weight: 900;
+}
+
+.addMoreItems {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.incDec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: 5%;
 }
