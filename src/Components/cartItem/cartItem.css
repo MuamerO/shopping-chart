@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 2px black solid;
+  align-items: flex-end;
 }
 
 .attributes {
@@ -30,11 +30,12 @@
 
 .cartPrice {
   margin-top: 2rem;
-  color: red;
+  color: grey;
   font-weight: 900;
 }
 
 .addMoreItems {
+  width: 8.7rem;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -53,4 +54,21 @@
   font-weight: 300;
   border: 1px solid black;
   border-radius: 5%;
+  margin: 0;
+}
+
+.cartItemAdding {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.amount {
+  margin: 0;
+  font-weight: bold;
+}
+.itemSubtotals {
+  margin: 0;
+  margin-top: 1.8rem;
+  font-weight: bold;
 }

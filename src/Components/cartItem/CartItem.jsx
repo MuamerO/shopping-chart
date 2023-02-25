@@ -1,7 +1,17 @@
 import "Components/cartItem/cartItem.css";
+import { increaseAmount, decreseAmount } from "features/cart/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartItem = ({ id, price, img, amount, size, title }) => {
+  const dispatch = useDispatch();
+
+  const addAmount = () => {
+    dispatch(increaseAmount(id));
+  };
+  const removeAmount = () => {
+    dispatch(decreseAmount(id));
+  };
+
   return (
     <div className="container">
       <div className="attributes">
@@ -14,11 +24,15 @@ const CartItem = ({ id, price, img, amount, size, title }) => {
       </div>
       <div className="cartItemAdding">
         <div className="addMoreItems">
-          <p className="incDec">+</p>
+          <p className="incDec" onClick={() => addAmount()}>
+            +
+          </p>
           <p className="amount">{`${amount}`}</p>
-          <p className="incDec">-</p>
+          <p className="incDec" onClick={removeAmount}>
+            -
+          </p>
         </div>
-        <p className="itemSubtotas">{`Total: ${price * amount}`}</p>
+        <p className="itemSubtotals">{`Total: ${price * amount}`}</p>
       </div>
     </div>
   );
