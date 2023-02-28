@@ -1,0 +1,27 @@
+.appFlex {
+  display: flex;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+@media (max-width: 800px) {
+  .imgCardContainer,
+  .itemContainer {
+    width: 100%;
+  }
+  .appFlex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .appFlex {
+    grid-template-columns: 100%;
+    margin-bottom: 2rem;
+  }
+  .imgCardContainer,
+  .itemContainer {
+    margin-bottom: 0;
+  }
+}

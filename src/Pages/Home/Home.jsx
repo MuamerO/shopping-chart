@@ -2,6 +2,7 @@ import { ItemCard, ImageCard, Hero } from "../../Components/index";
 import data from "../../herodata.js";
 import itemCardData from "../../itemCardData.js";
 import "../../App.css";
+import "./home.css";
 import ReadItem from "Components/ReadItem/ReadItem";
 import { useState } from "react";
 

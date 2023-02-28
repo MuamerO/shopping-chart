@@ -52,10 +52,18 @@
   font-size: 22px;
   font-weight: 800;
   margin-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 80%;
 }
 
 .itemSubTitle,
 .itemPrice {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-weight: 500;
-  margin-left: 30px;
+  margin-left: 10px;
+  max-width: 80%;
 }
