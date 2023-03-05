@@ -1,0 +1,87 @@
+.addressContainer {
+  margin: 2rem;
+}
+
+.contactFormContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(91, 216, 112, 0.24);
+}
+.contactH1 {
+  margin: 0;
+}
+
+.addressDiv {
+  margin: 0;
+}
+.addressDataDiv p {
+  margin: 0;
+}
+.mapContainer {
+  width: 50rem;
+  height: 20rem;
+  border: solid black 1px;
+  margin-top: 1rem;
+}
+
+.workingHoursContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.workingHours {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.workingHoursTime {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+.contactUsFormDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTextArea {
+  width: 80%;
+  height: 8rem;
+  padding: 0.5rem 0.8rem;
+  box-sizing: border-box;
+  border: 2px solid rgba(65, 64, 72, 0.205);
+  border-radius: 4px;
+  background-color: rgba(228, 226, 226, 0.24);
+  font-size: 1rem;
+  resize: none;
+  box-shadow: 0 3px 3px -4px #1d151562;
+}
+
+.contactInput {
+  width: 30%;
+  height: 2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  border: 2px solid rgba(65, 64, 72, 0.205);
+  border-radius: 4px;
+  box-shadow: 0 3px 3px -4px #1d151562;
+  background-color: rgba(228, 226, 226, 0.24);
+}
+
+.sendFeedback {
+  margin-top: 0.5rem;
+  color: aliceblue;
+  box-shadow: 0 6px 8px -4px #1d151562;
+  border: 1px solid black;
+  background-color: rgba(19, 17, 32, 0.836);
+  border-radius: 5%;
+  height: 2.5rem;
+  width: 10rem;
+}

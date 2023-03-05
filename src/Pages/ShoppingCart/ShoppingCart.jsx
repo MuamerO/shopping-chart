@@ -30,7 +30,7 @@ const ShoppingCart = () => {
 
   const checkOutMessage = (
     <div className="warning" style={{ color: `green` }}>
-      <p>You have checked out thank you for shoppping with us</p>
+      <p>You have checked out thank you for shopping with us</p>
     </div>
   );
 
@@ -47,7 +47,7 @@ const ShoppingCart = () => {
       <hr />
       {item.length == 0 ? noCartItems : inCartItems}
       <div className="grandTotal">
-        <div className="totalTitle">Total ammount:</div>
+        <div className="totalTitle">Total amount:</div>
         <div className="totalAmount">{total}</div>
       </div>
       <div className="buttonContainer">
