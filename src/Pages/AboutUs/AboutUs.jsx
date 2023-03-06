@@ -5,8 +5,8 @@ const AboutUs = () => {
   return (
     <div className="aboutUs">
       <div className="aboutHeader">
-        <h1 className="contactH1">About us</h1>
-        <p>All you need to know</p>
+        <h1 className="aboutContactH1">About us</h1>
+        <p className="aboutHeadParagraph">All you need to know</p>
       </div>
       <div className="aboutUscontainer">
         <div className="aboutOurStoryDiv">
@@ -22,22 +22,26 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="aboutOurTeam">
-          <h1>Team</h1>
-          <p>
-            Our team is made up of passionate individuals who are dedicated to
-            finding the best products for our customers. We search far and wide
-            to find unique and high-quality products that are not commonly found
-            in traditional stores.
-          </p>
+          <div className="teamDiv">
+            <h1>Team</h1>
+            <p>
+              Our team is made up of passionate individuals who are dedicated to
+              finding the best products for our customers. We search far and
+              wide to find unique and high-quality products that are not
+              commonly found in traditional stores.
+            </p>
+          </div>
         </div>
-        <div className="aboutValuesDiv">
-          <h1>Values</h1>
-          <p>
-            We believe in providing exceptional customer service to our
-            customers. If you have any questions or concerns, our team is always
-            ready to help you out. We want to make sure that your shopping
-            experience with us is a positive one.
-          </p>
+        <div className="aboutOurValues">
+          <div className="valuesDiv">
+            <h1>Values</h1>
+            <p>
+              We believe in providing exceptional customer service to our
+              customers. If you have any questions or concerns, our team is
+              always ready to help you out. We want to make sure that your
+              shopping experience with us is a positive one.
+            </p>
+          </div>
         </div>
       </div>
       <div className="backgroundImg">

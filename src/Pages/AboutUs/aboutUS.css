@@ -1,5 +1,6 @@
 .aboutUs {
   margin: 2rem;
+  margin-bottom: 0;
 }
 
 .aboutHeader {
@@ -8,14 +9,20 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 10vh;
-  background-color: rgba(16, 183, 189, 0.336);
+  height: 7vh;
+  background-color: rgba(0, 21, 214, 0.685);
+  background-size: cover;
+  color: aliceblue;
+}
+.aboutContactH1,
+.aboutHeadParagraph {
+  margin: 0;
 }
 
 .backgroundImg {
   width: 100%;
-  height: 72.2vh;
-  position: absolute;
+  height: 72vh;
+  position: relative;
 }
 
 .backgroundImg img {
@@ -25,13 +32,76 @@
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  z-index: 0;
+  opacity: 70%;
+}
+
+.aboutUscontainer {
+  position: relative;
+  width: 100%;
 }
 
 .aboutOurStoryDiv {
-  display: flex;
+  width: 30%;
+  z-index: 5;
+  position: absolute;
+  overflow: hidden;
+  top: 5rem;
+  color: aliceblue;
+  background-color: rgba(44, 243, 160, 0.541);
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.aboutOurTeam {
+  z-index: 9;
+  position: absolute;
+  overflow: hidden;
+  top: 25rem;
+  right: 0;
+  background-color: rgba(189, 16, 16, 0.5);
+  width: 30%;
+  color: aliceblue;
+  border-radius: 2rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.aboutOurValues {
+  background-color: rgba(0, 4, 240, 0.5);
+  width: 30%;
+  z-index: 9;
+  position: absolute;
   overflow: hidden;
   align-items: center;
+  top: 48rem;
+  color: aliceblue;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
+
+.valuesDiv,
+.teamDiv,
 .storyDiv {
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  margin-top: 1rem;
+}
+.valuesDiv h1,
+.teamDiv h1,
+.storyDiv h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.valuesDiv p,
+.teamDiv p,
+.storyDiv p {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
