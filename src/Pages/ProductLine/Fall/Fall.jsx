@@ -20,7 +20,7 @@ const Fall = () => {
     <div className="productLineDiv">
       <div className="fallAboutHeader">
         <h1 className="contactH1">Fall collection</h1>
-        <p>Falling for Fashion: The Latest Autumn Apparel</p>
+        <p>Falling for fashion: The Latest Autumn Apparel</p>
       </div>
       <div className="productLineShopContainer">
         <ReadItem dbName={dbName} setData={setImageCardsData} />
