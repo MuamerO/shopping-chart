@@ -38,8 +38,19 @@ const Filter = ({ season }) => {
         <Link to={Plink2}>{link2}</Link>
         <Link to={Plink3}>{link3}</Link>
       </div>
-      <div className="filterCategory">filter by category</div>
+      <div className="filterSize">sort by</div>
+      <ul>
+        <li>Name</li>
+        <li>Price</li>
+      </ul>
       <div className="filterSize">filter by size</div>
+      <ul>
+        <li>XS</li>
+        <li>S</li>
+        <li>M</li>
+        <li>L</li>
+        <li>XL</li>
+      </ul>
       <div className="filterSize">filter by price</div>
     </div>
   );

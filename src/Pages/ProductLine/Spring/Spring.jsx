@@ -16,10 +16,16 @@ const Spring = () => {
       return <ShopItemCard key={item.data.id} {...item.data} />;
     });
   return (
-    <div className="productLineShopContainer">
-      <ReadItem dbName={dbName} setData={setImageCardsData} />
-      <Filter season={"Spring"} />
-      <div className="productLineItemCards">{shopImageCards}</div>
+    <div className="productLineDiv">
+      <div className="springAboutHeader">
+        <h1 className="contactH1">Spring collection</h1>
+        <p>Blooming Wardrobe: The Fresh Spring Collection</p>
+      </div>
+      <div className="productLineShopContainer">
+        <ReadItem dbName={dbName} setData={setImageCardsData} />
+        <Filter season={"Spring"} />
+        <div className="productLineItemCards">{shopImageCards}</div>
+      </div>
     </div>
   );
 };

@@ -16,10 +16,16 @@ const Winter = () => {
       return <ShopItemCard key={item.data.id} {...item.data} />;
     });
   return (
-    <div className="productLineShopContainer">
-      <ReadItem dbName={dbName} setData={setImageCardsData} />
-      <Filter season={"Winter"} />
-      <div className="productLineItemCards">{shopImageCards}</div>
+    <div className="productLineDiv">
+      <div className="winterAboutHeader">
+        <h1 className="contactH1">Fall collection</h1>
+        <p>Falling for Fashion: The Latest Autumn Apparel</p>
+      </div>
+      <div className="productLineShopContainer">
+        <ReadItem dbName={dbName} setData={setImageCardsData} />
+        <Filter season={"Winter"} />
+        <div className="productLineItemCards">{shopImageCards}</div>
+      </div>
     </div>
   );
 };

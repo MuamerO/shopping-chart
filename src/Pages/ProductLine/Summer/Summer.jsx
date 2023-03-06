@@ -16,10 +16,16 @@ const Summer = () => {
       return <ShopItemCard key={item.data.id} {...item.data} />;
     });
   return (
-    <div className="productLineShopContainer">
-      <ReadItem dbName={dbName} setData={setImageCardsData} />
-      <Filter season={"Summer"} />
-      <div className="productLineItemCards">{shopImageCards}</div>
+    <div className="productLineDiv">
+      <div className="summerAboutHeader">
+        <h1 className="contactH1">Summer collection</h1>
+        <p>Sunny Styles: The Hottest Summer Collection</p>
+      </div>
+      <div className="productLineShopContainer">
+        <ReadItem dbName={dbName} setData={setImageCardsData} />
+        <Filter season={"Summer"} />
+        <div className="productLineItemCards">{shopImageCards}</div>
+      </div>
     </div>
   );
 };

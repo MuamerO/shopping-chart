@@ -7,6 +7,17 @@
 .productLineShopContainer {
   margin: 2rem;
 }
+.springAboutHeader {
+  display: flex;
+  flex-direction: column;
+  background-color: #77be6e;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: rgba(0, 0, 0, 0.815);
+  color: aliceblue;
+}
 
 @media (max-width: 1700px) {
   .productLineItemCards {
