@@ -17,10 +17,16 @@ const Fall = () => {
     });
 
   return (
-    <div className="productLineShopContainer">
-      <ReadItem dbName={dbName} setData={setImageCardsData} />
-      <Filter season={"Fall"} />
-      <div className="productLineItemCards">{shopImageCards}</div>
+    <div className="productLineDiv">
+      <div className="fallAboutHeader">
+        <h1 className="contactH1">Fall collection</h1>
+        <p>Falling for Fashion: The Latest Autumn Apparel</p>
+      </div>
+      <div className="productLineShopContainer">
+        <ReadItem dbName={dbName} setData={setImageCardsData} />
+        <Filter season={"Fall"} />
+        <div className="productLineItemCards">{shopImageCards}</div>
+      </div>
     </div>
   );
 };
