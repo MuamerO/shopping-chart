@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ShopItemCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "features/cart/cartSlice";
@@ -12,8 +12,8 @@ const ShopItemCard = ({
   collection,
 }) => {
   const uniqueItem = useSelector((state) => state.cart.cartItems);
-
   const [showHide, setShowHide] = useState({ display: "none" });
+  const [succesShowHide, setSuccesShowHide] = useState({ display: "none" });
   const [showHideDouble, setShowHideDouble] = useState({
     display: "none",
   });
@@ -47,8 +47,10 @@ const ShopItemCard = ({
       }, 1000);
       return;
     }
-    setShowHide({ display: "none" });
-    setShowHideDouble({ display: "none" });
+    setSuccesShowHide({ display: "flex", color: "green" });
+    setTimeout(() => {
+      setSuccesShowHide({ display: "none" });
+    }, 1000);
     dispatch(addItem(itemBought));
   };
 
@@ -197,6 +199,9 @@ const ShopItemCard = ({
       </div>
       <div className="warning" style={showHideDouble}>
         You already added this size of item
+      </div>
+      <div className="warning" style={succesShowHide}>
+        Item is palced in basket
       </div>
       <div
         className="buyBox"
