@@ -1,3 +1,4 @@
+import { text } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./filter.css";
@@ -38,20 +39,42 @@ const Filter = ({ season }) => {
         <Link to={Plink2}>{link2}</Link>
         <Link to={Plink3}>{link3}</Link>
       </div>
-      <div className="filterSize">sort by</div>
-      <ul>
-        <li>Name</li>
-        <li>Price</li>
-      </ul>
-      <div className="filterSize">filter by size</div>
-      <ul>
-        <li>XS</li>
-        <li>S</li>
-        <li>M</li>
-        <li>L</li>
-        <li>XL</li>
-      </ul>
-      <div className="filterSize">filter by price</div>
+      <div className="filterSize">Sort by:</div>
+      <div className="filterName">
+        <p className="filterTitle">Name</p>
+        <ul>
+          <li className="filterAscending">Ascending</li>
+          <li className="filterDescending">Descending</li>
+          <li className="cancel">X</li>
+        </ul>
+      </div>
+      <div className="filterName">
+        <p className="filterTitle">Price</p>
+        <ul>
+          <li className="filterAscending">Ascending</li>
+          <li className="filterDescending">Descending</li>
+          <li className="cancel">X</li>
+        </ul>
+      </div>
+      <div className="filterSize">Filter by size</div>
+      <div className="filterSizeList">
+        <ul>
+          <li>XS</li>
+          <li>S</li>
+          <li>M</li>
+          <li>L</li>
+          <li>XL</li>
+          <li className="cancel">X</li>
+        </ul>
+      </div>
+      <div className="filterSize">Filter by price</div>
+      <div className="filterMinMax">
+        <p>Min:</p>
+        <input className="sizeInput" />
+        <p>Max:</p>
+        <input className="sizeInput" />
+        <p className="cancelMinMax">X</p>
+      </div>
     </div>
   );
 };
