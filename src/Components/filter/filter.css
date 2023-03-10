@@ -2,6 +2,7 @@
   width: fit-content;
   min-height: 60vh;
   margin-right: 1rem;
+  cursor: default;
 }
 
 .filterCollectionChange {
@@ -78,6 +79,12 @@
   margin: 0;
   margin-left: 2rem;
   font-size: 1.1rem;
+}
+.cancelMinMax,
+.filterDescending,
+.cancel,
+.filterAscending {
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {

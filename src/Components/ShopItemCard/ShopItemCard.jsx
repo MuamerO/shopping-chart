@@ -11,13 +11,8 @@ const ShopItemCard = ({
   id,
   collection,
 }) => {
-  const uniqueItem = useSelector((state) => state.cart.cartItems);
-  const [showHide, setShowHide] = useState({ display: "none" });
-  const [succesShowHide, setSuccesShowHide] = useState({ display: "none" });
-  const [showHideDouble, setShowHideDouble] = useState({
-    display: "none",
-  });
   const dispatch = useDispatch();
+
   const [itemBought, setItemBought] = useState({
     id: id,
     price: price,
@@ -26,6 +21,12 @@ const ShopItemCard = ({
     title: title,
     img: cardImage,
     amount: 1,
+  });
+  const uniqueItem = useSelector((state) => state.cart.cartItems);
+  const [showHide, setShowHide] = useState({ display: "none" });
+  const [succesShowHide, setSuccesShowHide] = useState({ display: "none" });
+  const [showHideDouble, setShowHideDouble] = useState({
+    display: "none",
   });
   const [sizeSelected, setSizeSelected] = useState("");
   const handleBoughtClick = () => {

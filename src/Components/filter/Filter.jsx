@@ -1,9 +1,17 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./filter.css";
 
-const Filter = ({ season }) => {
+const Filter = ({
+  season,
+  setName,
+  setPrice,
+  setPriceRangeMin,
+  setPriceRangeMax,
+}) => {
+  const [ascName, setAscName] = useState("");
+  const [ascPrice, setAscPrice] = useState("");
+
   let link1 = "";
   let link2 = "";
   let link3 = "";
@@ -31,6 +39,35 @@ const Filter = ({ season }) => {
   let Plink2 = `/ProductLine/${link2}`;
   let Plink3 = `/ProductLine/${link3}`;
 
+  const handlePrice = (order) => {
+    if (order == "A") {
+      setPrice("A");
+      setAscPrice("A");
+    }
+    if (order == "D") {
+      setPrice("D");
+      setAscPrice("D");
+    }
+    if (order == "X") {
+      setPrice("");
+      setAscPrice("");
+    }
+  };
+  const handleName = (order) => {
+    if (order == "A") {
+      setName("A");
+      setAscName("A");
+    }
+    if (order == "D") {
+      setName("D");
+      setAscName("D");
+    }
+    if (order == "X") {
+      setName("");
+      setAscName("");
+    }
+  };
+
   return (
     <div className="filterContainer">
       <div className="filterCollectionChange">
@@ -43,20 +80,64 @@ const Filter = ({ season }) => {
       <div className="filterName">
         <p className="filterTitle">Name</p>
         <ul>
-          <li className="filterAscending">Ascending</li>
-          <li className="filterDescending">Descending</li>
-          <li className="cancel">X</li>
+          <li
+            className="filterAscending"
+            onClick={() => handleName(`A`)}
+            style={
+              ascName == "A"
+                ? { fontWeight: "600", color: "green" }
+                : { fontWeight: "Normal", color: "black" }
+            }
+          >
+            Ascending
+          </li>
+          <li
+            className="filterDescending"
+            onClick={() => handleName(`D`)}
+            style={
+              ascName == "D"
+                ? { fontWeight: "600", color: "green" }
+                : { fontWeight: "Normal", color: "black" }
+            }
+          >
+            Descending
+          </li>
+          <li className="cancel" onClick={() => handleName(`X`)}>
+            X
+          </li>
         </ul>
       </div>
       <div className="filterName">
         <p className="filterTitle">Price</p>
         <ul>
-          <li className="filterAscending">Ascending</li>
-          <li className="filterDescending">Descending</li>
-          <li className="cancel">X</li>
+          <li
+            className="filterAscending"
+            onClick={() => handlePrice(`A`)}
+            style={
+              ascPrice == "A"
+                ? { fontWeight: "600", color: "green" }
+                : { fontWeight: "Normal", color: "black" }
+            }
+          >
+            Ascending
+          </li>
+          <li
+            onClick={() => handlePrice(`D`)}
+            className="filterDescending"
+            style={
+              ascPrice == "D"
+                ? { fontWeight: "600", color: "green" }
+                : { fontWeight: "Normal", color: "black" }
+            }
+          >
+            Descending
+          </li>
+          <li onClick={() => handlePrice(`X`)} className="cancel">
+            X
+          </li>
         </ul>
       </div>
-      <div className="filterSize">Filter by size</div>
+      {/* <div className="filterSize">Filter by size</div>
       <div className="filterSizeList">
         <ul>
           <li>XS</li>
@@ -66,12 +147,12 @@ const Filter = ({ season }) => {
           <li>XL</li>
           <li className="cancel">X</li>
         </ul>
-      </div>
+      </div> */}
       <div className="filterSize">Filter by price</div>
       <div className="filterMinMax">
-        <p>Min:</p>
+        <p className="filterMin">Min:</p>
         <input className="sizeInput" />
-        <p>Max:</p>
+        <p className="filterMax">Max:</p>
         <input className="sizeInput" />
         <p className="cancelMinMax">X</p>
       </div>
